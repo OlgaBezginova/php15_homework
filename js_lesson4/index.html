@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js_lesson4/lesson4.js"></script>
+    </head>
+    <body>
+        <div class="container">
+        <!--Task 1-->
+
+            <div>Товары</div>
+            <ul class="task1">
+                <li>Яблоко</li>
+                <li>Апельсин</li>
+            </ul>
+
+            <!--Task 2-->
+
+            <table>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+            </table>
+
+            <!--Task 3-->
+
+            <ul class="tree">
+                <li>first</li>
+                <li>second</li>
+                <li>
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                    </ul>
+                </li>
+                <li>third</li>
+            </ul>
+
+            <!--Task 4-->
+
+            <div class="container py-4">
+                <header class="pb-3 mb-4 border-bottom">
+                    <span class="fs-4">Статьи</span>
+                </header>
+                <div id="filters" class="row bordered">
+                    <form id="filter-form" action="#" class="form-horizontal">
+                        <div class="row">
+                            <div class="col">
+                                <input name="title" placeholder="title" class="form-control" value="">
+                            </div>
+                            <div class="col">
+                                <select name="order" class="form-select">
+                                    <option value="date desc">Сначала новые</option>
+                                    <option value="date asc">Сначала старые</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div id="catalogue" class="row bordered">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Название</th>
+                            <th>Автор</th>
+                            <th>Дата</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>PHP book</td>
+                            <td>Author 4</td>
+                            <td>1986-09-01 01:32:05</td>
+                        </tr>
+                        <tr>
+                            <td>My first article 1</td>
+                            <td>Author 1</td>
+                            <td>2016-08-28 19:28:35</td>
+                        </tr>
+                        <tr>
+                            <td>My best article 2</td>
+                            <td>Author 2</td>
+                            <td>2019-08-28 19:28:52</td>
+                        </tr>
+                        <tr>
+                            <td>JS book</td>
+                            <td>Author 3</td>
+                            <td>2021-09-01 01:31:50</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
