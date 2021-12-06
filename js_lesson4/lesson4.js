@@ -67,7 +67,7 @@ $('document').ready(function () {
     document.querySelector('ul.tree ul').outerHTML = 'one more second';
     $('ul.tree ul').closest('li').html('one more second');
 
-    console.log('• (JS + jQuery) В HTML по ссылке page.html найти:');
+    console.log('4 (JS + jQuery) В HTML по ссылке page.html найти:');
     console.log('• Блок c id=“filters”');
 
     console.log(document.getElementById('filters'));
@@ -107,5 +107,29 @@ $('document').ready(function () {
     console.log(parentForm.querySelector('.row').lastElementChild);
     console.log($('[name="order"]').closest('form').find('.col').last());
 
+    console.log('5 (JS + jQuery) Добавьте JavaScript к кнопке button, чтобы при нажатии элемент <div id="text"> исчезал.');
+
+    document.getElementById('hider').addEventListener('click', function (ev) {
+        document.getElementById('text').style.display = 'none';
+    });
+
+    $('#hider').on('click', function() {
+        $('#text').hide();
+    });
+
+    console.log('6 (JS + jQuery) Создайте кнопку, которая будет скрывать себя по нажатию.');
+
+    class Hider {
+        handleEvent(event) {
+            event.target.style.display = 'none';
+        }
+    }
+
+    let hider = new Hider();
+    document.getElementById('self-hider').addEventListener('click', hider);
+
+    $('#self-hider').on('click', function() {
+        $(this).hide();
+    });
 
 });
