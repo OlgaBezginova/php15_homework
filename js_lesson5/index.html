@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Title</title>
+        <title>Posts</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
         <script type="text/javascript" src="lesson5.js"></script>
     </head>
@@ -12,7 +12,7 @@
                 <span class="fs-4">Статьи</span>
             </header>
             <div id="filters" class="row bordered">
-                <form id="filter-form" onsubmit="event.preventDefault()" class="form-horizontal">
+                <form id="filter-form" class="form-horizontal">
                     <div class="row">
                         <div class="col-6">
                             <div class="input-group mb-3">
@@ -41,6 +41,21 @@
                         </tbody>
                     </table>
                </div>
+            </div>
+            <div id="adder" class="row bordered">
+                <form id="add-post-form" class="form-horizontal">
+                    <div class="row">
+                        <div class="col-3">
+                            <input name="title" type="text" placeholder="Название" class="form-control">
+                        </div>
+                        <div class="col-2">
+                            <input name="author" type="text" placeholder="Автор" class="form-control">
+                        </div>
+                        <div class="col-1">
+                            <input type="submit" class="btn btn-primary" value="Добавить статью">
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </body>

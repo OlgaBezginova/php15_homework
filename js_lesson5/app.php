@@ -17,9 +17,10 @@ function connect() {
 
 function getPosts() {
     $mysql = connect();
+
     $query = "SELECT title, author FROM posts";
-    if( isset( $_POST['s'] ) ){
-        $query .= " WHERE `title` LIKE '%{$_POST['s']}%'";
+    if( isset( $_GET['s'] ) ){
+        $query .= " WHERE `title` LIKE '%{$_GET['s']}%'";
     }
 
     $data = mysqli_query( $mysql, $query );
@@ -28,4 +29,22 @@ function getPosts() {
     echo json_encode( $data );
 }
 
-echo getPosts();
+function addPost( $title, $author ) {
+    $title  = trim( strip_tags( $title ) );
+    $author = trim( strip_tags( $author ) );
+
+    if( empty( $title ) || empty( $author ) ) {
+        return;
+    }
+
+    $mysql = connect();
+    $query = "INSERT INTO posts (title, author) VALUES ('$title', '$author')";
+
+    mysqli_query( $mysql, $query );
+}
+
+if ( ! empty( $_POST ) ) {
+    addPost( $_POST['title'], $_POST['author'] );
+} else {
+    getPosts();
+}
